@@ -67,6 +67,7 @@ public class HW2 {
         System.out.println(r);
         }
         
+        
         //program4
         String myString1 = "Saba";
         String myString2 = "John";
