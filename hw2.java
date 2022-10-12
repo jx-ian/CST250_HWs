@@ -63,9 +63,7 @@ public class HW2 {
             j--;
         }
         
-        for (char r : reverseArray5) {
-        System.out.println(r);
-        }
+        System.out.println(reverseArray5);
         
         
         //program4
