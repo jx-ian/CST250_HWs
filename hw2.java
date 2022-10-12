@@ -26,51 +26,46 @@ public class HW2 {
         //program2
         int [] array3 = {1, 77, -5, 2, 65, 30};
         int [] array4 = {-10, 50, 15, 2, 77};
-        int find1 = 65;
-        int find2 = 77;
         boolean found1 = false;
         boolean found2 = false;
-
-        for (int i = 0; i < array3.length; i++) {
-            for (int k = 0; k < array3.length; k++) {
-                if (array3[i] == find1 && array3[k] == find2) {
-                    found1 = true;
-                    break;
-                }
-            }
-        }
-
-        if (found1 == true) {
-            System.out.println(Arrays.toString(array3) + " contains both 65 and 77.");
-        } 
-        else {
-            System.out.println(Arrays.toString(array3) + " doesn't contain both 65 and 77.");
+        
+        for (int n : array3) {  
+            found1 = !(n != 65 && n != 77);
         }
         
-        for (int i = 0; i < array4.length; i++) {
-            for (int k = 0; k < array4.length; k++) {
-                if (array4[i] == find1 && array4[k] == find2) {
-                    found2 = true;
-                    break;
-                }
-            }
+        if (found1 == true) {
+            System.out.println(Arrays.toString(array3) + " doesn't contains both 65 and 77.");
         }
-
-        if (found2 == true) {
-            System.out.println(Arrays.toString(array4) + " contains both 65 and 77.");
-        } 
         else {
-            System.out.println(Arrays.toString(array4) + " doesn't contain both 65 and 77.");
+            System.out.println(Arrays.toString(array3) + " contains both 65 and 77.");
+        }
+        
+        for (int n : array4) {  
+            found2 = !(n != 65 && n != 77);
+        }
+        
+        if (found2 == true) {
+            System.out.println(Arrays.toString(array4) + " doesn't contains both 65 and 77.");
+        }
+        else {
+            System.out.println(Arrays.toString(array4) + " contains both 65 and 77.");
         }
         
         
         //program3
-        char [] array5 = {'s', 'a', 'b', 'a'}; 
+        char [] array5 = {'s', 'a', 'b', 'a'};
+        char [] reverseArray5 = new char[array5.length];
+        int p = 0, j = array5.length - 1;
         
-        for (int i = array5.length-1; i >= 0; i--) {
-            System.out.println(array5[i]);
+        while (j >= 0) {
+            reverseArray5[p] = array5[j];
+            p++;
+            j--;
         }
         
+        for (char r : reverseArray5) {
+        System.out.println(r);
+        }
         
         //program4
         String myString1 = "Saba";
