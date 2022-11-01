@@ -54,10 +54,5 @@ public class Hw4 {
         joe.balance();
         
         //BONUS
-        Person jia = new Person("Jia");
-        
-        jia.account("Checking", 300);
-        
-        System.out.println(jia.account);
     }
 }
