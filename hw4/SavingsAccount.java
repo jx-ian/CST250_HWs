@@ -34,5 +34,4 @@ public class SavingsAccount extends BankAccount {
         }
         setBalance(super.getBalance() - amount);
     }
-    
 }
