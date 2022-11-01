@@ -1,6 +1,5 @@
 package hw4;
 
-
 /**
  * @author jiahaoxian
  */
@@ -11,14 +10,12 @@ public class Hw4 {
     public static void main(String[] args) {
         
         //Question #1
-        SavingsAccount joe = new SavingsAccount("Joe", 100);
-        joe.annualInterestRate = 1;
-        System.out.println(joe.owner +" have $ " + joe.balance + " and " + joe.annualInterestRate + " % annual interest rate.");
+        SavingsAccount joe = new SavingsAccount("Joe", 100, 1);
+        joe.balance();
         
         //Question #2
-        CheckingAccount emily = new CheckingAccount("Emily", 200);
-        emily.insufficientFundsFee = 10;
-        System.out.println(emily.owner +" have $ " + emily.balance + " and $ " + emily.insufficientFundsFee + " insufficient funds fee.");
+        CheckingAccount emily = new CheckingAccount("Emily", 200, 10);
+        emily.balance();
         
         //Question #3
         emily.deposit(50);
@@ -39,9 +36,8 @@ public class Hw4 {
         joe.balance();
         
         //Question #7
-        SavingsAccount sam = new SavingsAccount("Sam", 250);
-        sam.annualInterestRate = 0.5;
-        System.out.println(sam.owner +" have $ " + sam.balance + " and " + sam.annualInterestRate + " % annual interest rate.");
+        SavingsAccount sam = new SavingsAccount("Sam", 250, 0.5);
+        sam.balance(); 
         
         //Question #8
         joe.depositMonthlyInterest();
@@ -58,5 +54,10 @@ public class Hw4 {
         joe.balance();
         
         //BONUS
+        Person jia = new Person("Jia");
+        
+        jia.account("Checking", 300);
+        
+        System.out.println(jia.account);
     }
 }

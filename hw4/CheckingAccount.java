@@ -6,22 +6,32 @@ package hw4;
 
 public class CheckingAccount extends BankAccount {
 
-    double insufficientFundsFee;
+    private double insufficientFundsFee;
 
-    public CheckingAccount(String owner, double balance) {
+    public CheckingAccount(String owner, double balance, double insufficientFundsFee) {
         super(owner, balance);
+        this.insufficientFundsFee = insufficientFundsFee;
     }
 
+    public double getInsufficientFundsFee() {
+        return insufficientFundsFee;
+    }
+
+    public void setInsufficientFundsFee(double insufficientFundsFee) {
+        this.insufficientFundsFee = insufficientFundsFee;
+    }
+
+
     public void processCheck(double checkAmount) {
-        balance = balance + checkAmount;
+        super.deposit(checkAmount);
     }
 
     public void withdrawChecking(double amount) {
-        if (amount > balance) {
+        if (amount > super.getBalance()) {
             System.out.println("Cancelled: attempted to withdraw $ " + amount + ". Due to insufficient funds, $ " + insufficientFundsFee + " fee is collected.");
-            balance = balance - insufficientFundsFee;
+            setBalance(super.getBalance() - insufficientFundsFee);
             return;
         }
-        balance = balance - amount;
+        setBalance(super.getBalance() - amount);
     }  
 }

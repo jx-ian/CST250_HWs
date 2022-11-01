@@ -5,11 +5,27 @@ package hw4;
  */
 
 public class BankAccount {
+    
+    private String owner;
+    private double balance;
+    
+    public String getOwner() {
+        return owner;
+    }
 
-    String owner;
-    double balance;
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
 
-    BankAccount(String owner, double balance) {
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public BankAccount(String owner, double balance) {
         this.owner = owner;
         this.balance = balance;
     }
